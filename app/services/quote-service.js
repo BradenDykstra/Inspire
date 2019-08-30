@@ -32,7 +32,6 @@ export default class QuoteService {
 	getQuote() {
 		_quoteApi.get()
 			.then(res => {
-				console.log(res.data);
 				_setState('quote', new Quote(res.data.quote))
 			})
 	}

@@ -13,22 +13,33 @@
 
 <body id="bg-image">
 	<div class="container-fluid">
-		<div class="row d-flex flex-row-reverse">
+		<div class="row d-flex flex-row-reverse justify-content-between">
 			<div id="weather" class="col-3 text-center bg-card text-light p-4 mb-5 rounded-bottom">
 
 			</div>
+			<div class="col-4 bg-card text-light rounded-bottom py-5">
+				<h4>To Do:</h4>
+				<div id="todo-error"></div>
+				<div id="todos"></div>
+				<form onsubmit="app.controllers.todoController.addTodo(event)">
+					<div class="input-group">
+
+						<input class="form-control" type="text" name="description" id="description"
+							placeholder="Add something to do">
+						<div class="input-group-append">
+
+							<button class="btn btn-info" type="submit"><i class="fa fa-plus"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 
-		<div class="row d-flex justify-content-between fixed-bottom pt-5 px-1">
-			<div id="quote" class="col-7 text-center bg-card text-light p-2 rounded-top py-5">
+		<div class="row d-flex flex-row-reverse fixed-bottom pt-3 px-2">
+			<div id="quote" class="col-7 text-center bg-card text-light p-2 rounded-top py-3">
 				The Quote
 			</div>
-			<div class="col-3 bg-card text-light rounded-top py-5">
-				A Todo List
-				<div id="todo-error"></div>
-				<form onsubmit=""></form>
-				<div id="todos"></div>
-			</div>
+
 		</div>
 
 		<div class="row">
