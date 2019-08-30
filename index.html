@@ -11,21 +11,20 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
+<body id="bg-image" class="text-light">
 	<div class="container-fluid">
-		<div class="row d-flex flex-row-reverse justify-content-between">
-			<div id="weather" class="col-3 text-center bg-card text-light p-4 mb-5 rounded-bottom">
+		<div class="d-flex flex-row-reverse justify-content-between">
+			<div id="weather" class="col-2 text-center bg-card p-4 rounded-bottom">
 
 			</div>
-			<div class="col-4 bg-card text-light rounded-bottom py-5">
+			<div class="col-2 bg-card rounded-bottom py-4">
 				<h4>To Do:</h4>
 				<div id="todo-error"></div>
 				<div id="todos"></div>
 				<form onsubmit="app.controllers.todoController.addTodo(event)">
 					<div class="input-group">
 
-						<input class="form-control" type="text" name="description" id="description"
-							placeholder="Add something to do">
+						<input class="form-control" type="text" name="description" id="description" placeholder="Add a task">
 						<div class="input-group-append">
 
 							<button class="btn btn-info" type="submit"><i class="fa fa-plus"></i></button>
@@ -34,15 +33,18 @@
 				</form>
 			</div>
 		</div>
+		<div class="d-flex justify-content-center">
+			<div class="col-7 text-center bg-card rounded">
+				<h1 id="clock">THIS IS A CLOCK</h1>
+				<h2>GOOD MORNING/AFTERNOON/EVENING</h2>
+			</div>
+		</div>
 
-		<div class="row d-flex flex-row-reverse fixed-bottom pt-3 px-2">
-			<div id="quote" class="col-7 text-center bg-card text-light p-2 rounded-top py-3">
+		<div class="d-flex flex-row-reverse fixed-bottom pt-3 px-2">
+			<div id="quote" class="col-7 text-center bg-card p-2 rounded-top py-3">
 				The Quote
 			</div>
 
-		</div>
-
-		<div class="row">
 		</div>
 
 	</div>

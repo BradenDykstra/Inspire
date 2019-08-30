@@ -32,7 +32,6 @@ export default class TodoService {
 	}
 
 	getTodos() {
-		console.log("Getting the Todo List")
 		todoApi.get()
 			.then(res => {
 				// Handle this response from the server
@@ -46,8 +45,6 @@ export default class TodoService {
 	}
 
 	addTodo(todo) {
-		console.log(todo);
-
 		todoApi.post('', todo)
 			.then(res => {
 				// Handle this response from the server (hint: what data comes back, do you want this?)

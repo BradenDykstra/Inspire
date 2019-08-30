@@ -14,7 +14,7 @@ export default class Todo {
     if (this.completed) {
       template += `</strike>`
     }
-    template += ` <i class="fas fa-check text-success" onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')"></i> <i class="fas fa-times text-danger" onclick="app.controllers.todoController.removeTodo('${this._id}')"></i></p>`
+    template += ` <i class="fas fa-check text-success icon-btn" onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')"></i> <i class="fas fa-times text-danger icon-btn" onclick="app.controllers.todoController.removeTodo('${this._id}')"></i></p>`
     return template
   }
 }
