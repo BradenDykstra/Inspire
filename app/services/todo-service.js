@@ -35,7 +35,7 @@ export default class TodoService {
 		console.log("Getting the Todo List")
 		todoApi.get()
 			.then(res => {
-				//TODO Handle this response from the server
+				// Handle this response from the server
 				_setState('todos', res.data.data)
 			})
 			.catch(err => _setState('error', err.response.data))
@@ -59,19 +59,26 @@ export default class TodoService {
 
 	toggleTodoStatus(todoId) {
 		let todo = _state.todos.find(todo => todo._id == todoId)
-		//TODO Make sure that you found a todo, 
+		// Make sure that you found a todo, 
 		//		and if you did find one
 		//		change its completed status to whatever it is not (ex: false => true or true => false)
+		if (todo.completed) {
+			todo.completed = false
+		} else {
+			todo.completed = true
+		}
 
 		todoApi.put(todoId, todo)
 			.then(res => {
-				//TODO do you care about this data? or should you go get something else?
+				// do you care about this data? or should you go get something else?
+				_setState('todos', _state.todos)
+
 			})
 			.catch(err => _setState('error', err.response.data))
 	}
 
 	removeTodo(todoId) {
-		//TODO Work through this one on your own
+		// Work through this one on your own
 		//		what is the request type
 		//		once the response comes back, what do you need to insure happens?
 		let del = _state.todos.find(t => t._id == todoId)
