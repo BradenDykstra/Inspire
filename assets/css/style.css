@@ -2,3 +2,12 @@
   color: red;
   font-size: 2em;
 }
+
+#bg-image{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-card{
+  background-color: rgba(52, 58, 64, 0.75)
+}

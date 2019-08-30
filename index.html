@@ -6,25 +6,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css'>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body id="bg-image">
-	<div id="weather">
-		Your Weather Template
-	</div>
+	<div class="container-fluid">
+		<div class="row d-flex flex-row-reverse">
+			<div id="weather" class="col-3 text-center bg-card text-light p-4 mb-5 rounded-bottom">
 
-	<div id="quote">
-		The Quote
-	</div>
+			</div>
+		</div>
 
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
-	</div>
+		<div class="row d-flex justify-content-between fixed-bottom pt-5 px-1">
+			<div id="quote" class="col-7 text-center bg-card text-light p-2 rounded-top py-5">
+				The Quote
+			</div>
+			<div class="col-3 bg-card text-light rounded-top py-5">
+				A Todo List
+				<div id="todo-error"></div>
+				<form onsubmit=""></form>
+				<div id="todos"></div>
+			</div>
+		</div>
 
+		<div class="row">
+		</div>
+
+	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
 </body>
