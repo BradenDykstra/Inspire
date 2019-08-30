@@ -4,6 +4,13 @@ let _cs = new ClockService()
 
 function _draw() {
   document.getElementById('clock').innerHTML = _cs.Clock.Template
+  if (_cs.Clock.hours < 12 && _cs.Clock.hours > 3) {
+    document.getElementById('time').innerHTML = "Good Morning, "
+  } else if (_cs.Clock.hours < 19 && _cs.Clock.hours > 12) {
+    document.getElementById('time').innerHTML = "Good Afternoon, "
+  } else {
+    document.getElementById('time').innerHTML = "Good Evening, "
+  }
 }
 
 export default class ClockController {

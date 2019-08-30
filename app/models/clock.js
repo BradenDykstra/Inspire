@@ -3,6 +3,7 @@ export default class Clock {
     this.date = new Date()
     this.hours = this.date.getHours()
     this.minutes = this.date.getMinutes()
+    // this.name = swal
   }
 
   get Template() {
