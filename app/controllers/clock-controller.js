@@ -5,11 +5,11 @@ let _cs = new ClockService()
 function _draw() {
   document.getElementById('clock').innerHTML = _cs.Clock.Template
   if (_cs.Clock.hours < 12 && _cs.Clock.hours > 3) {
-    document.getElementById('time').innerHTML = "Good Morning, "
+    document.getElementById('time').innerHTML = "Good Morning, Braden"
   } else if (_cs.Clock.hours < 19 && _cs.Clock.hours > 12) {
-    document.getElementById('time').innerHTML = "Good Afternoon, "
+    document.getElementById('time').innerHTML = "Good Afternoon, Braden"
   } else {
-    document.getElementById('time').innerHTML = "Good Evening, "
+    document.getElementById('time').innerHTML = "Good Evening, Braden"
   }
 }
 
