@@ -5,7 +5,9 @@ const _todoService = new TodoService()
 // Create the render function
 function _drawTodos() {
 	let todos = _todoService.Todo
-	let template = ''
+	let template = `<h4>To Do (`
+	template += _todoService.TodoLength.toString()
+	template += `):</h4>`
 	todos.forEach(t => {
 		template += t.Template
 	})

@@ -7,6 +7,11 @@ export default class Clock {
   }
 
   get Template() {
-    return `<h1>${this.hours}:${this.minutes}`
+    let template = `<h1>${this.hours}:`
+    if (this.minutes < 10) {
+      template += `0`
+    }
+    template += `${this.minutes}`
+    return template
   }
 }

@@ -44,6 +44,10 @@ export default class TodoService {
 		return _state.todos.map(t => new Todo(t))
 	}
 
+	get TodoLength() {
+		return _state.todos.length
+	}
+
 	addTodo(todo) {
 		todoApi.post('', todo)
 			.then(res => {
